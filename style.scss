@@ -7,18 +7,34 @@
   src: url(fonts/Jude-MediumItalicWeb-.eot#iefix) format('eot'),
        url(fonts/Jude-MediumItalicWeb.ttf) format('truetype'); }
 
-html { overflow-x: hidden; }
-body{ 
-  background: url('lines.gif') #fff; 
-  color: #001f3f; 
-  font-size: 2.9em; 
-  line-height: 1.35; 
-  margin: 1em 0em 0em;
-  -webkit-text-size-adjust: 100%;
-  font-family: "JudeBold", times, serif;
+html { 
+  overflow-x: hidden; 
+  
+  body{ 
+    background: url('lines.gif') #fff; 
+    color: #001f3f;  
+    margin: 1em 0em 0em;
+    -webkit-text-size-adjust: 100%;
+    font-size: 2.9em; 
+    line-height: 1.35;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-spacing: 6px;
+    font-family: times, serif;
+  }
+
+  &.wf-judebold-n4-active{
+      body{ 
+        font-weight: 400;
+        letter-spacing: normal;
+        word-spacing: normal;
+        font-family: "JudeBold";
+      }
+    }
 }
+
 @media screen and (max-width: 600px) {
-  body { font-size: 2.4em; }
+  body {font-size: 2.4em;}
 }
 @media only screen and (max-device-width: 480px) {
   body { font-size: 1.5em; }
@@ -49,7 +65,7 @@ a { color: inherit; text-decoration: none; border-bottom: 0.1em solid;
 a:hover { color: #0099CC; }
 a[data-url] { position: relative; display: inline; padding-top: 0.1em; }
 a[data-url]:after { content: "↪ " attr(data-url); position: absolute; top: -1em; left: 0; font-size: 0.275em; white-space: nowrap; opacity: 0.4;
-  font-family: "JudeMediumItalic"; }
+  font-family: "JudeMediumItalic"; font-style: italic;}
 
 ul { list-style: none; padding: 0; margin: 0; display: inline; }
 ul li { margin-bottom: 0.2em; white-space: nowrap; display: inline; }
