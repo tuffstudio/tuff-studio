@@ -33,7 +33,7 @@ $(function() {
   $('body').prepend('<div class="back-holder"><a href="#" class="back">&larr;</a></div>');
 
   var scrollTo = false;
-  $('.wrapper, .back-holder').on('click', function(e) {
+  $('.wrapper, .back-holder').on('click', function() {
 
     // If there are no open projects, do nothing
     if (!$('body').is('.open-project')) return;
