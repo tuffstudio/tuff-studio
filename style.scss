@@ -43,17 +43,9 @@ html {
 canvas { position: absolute; top: 0; left: 0; }
 
 p { margin: 0em 0em 0.75em;
-    -webkit-hyphenate-limit-after: 4;
-       -moz-hyphenate-limit-after: 4;
-        -ms-hyphenate-limit-after: 4;
+   
             hyphenate-limit-after: 4;
-    -webkit-hyphenate-limit-before: 4;
-       -mox-hyphenate-limit-before: 4;
-        -ms-hyphenate-limit-before: 4;
             hyphenate-limit-before: 4;
-    -webkit-hyphens: auto;
-       -moz-hyphens: auto;
-        -ms-hyphens: auto;
             hyphens: auto; }
 h2 { font-size: 0.5em; font-weight: normal; margin: 0em 0em 0.25em; color: #6A727C; }
 h3 { opacity: 0.5; font-size: 0.5em; }
@@ -186,27 +178,6 @@ body.open-project .back-holder { left: 0%;
   .video-wrapper figcaption { position: static; margin-left: 0; width: auto; top: auto; }
 }
 
-@-webkit-keyframes restart {
-  0%   { -webkit-transform: translate(0em, 0em); }
-  20%  { -webkit-transform: translate(-0.2em, 0em); }
-  50%  { -webkit-transform: translate(0.2em, 0em); }
-  80%  { -webkit-transform: translate(-0.2em, 0em); }
-  100% { -webkit-transform: translate(0em, 0em); }
-}
-@-moz-keyframes restart {
-  0%   { -moz-transform: translate(0em, 0em); }
-  20%  { -moz-transform: translate(-0.2em, 0em); }
-  50%  { -moz-transform: translate(0.2em, 0em); }
-  80%  { -moz-transform: translate(-0.2em, 0em); }
-  100% { -moz-transform: translate(0em, 0em); }
-}
-@-o-keyframes restart {
-  0%   { -o-transform: translate(0em, 0em); }
-  20%  { -o-transform: translate(-0.2em, 0em); }
-  50%  { -o-transform: translate(0.2em, 0em); }
-  80%  { -o-transform: translate(-0.2em, 0em); }
-  100% { -o-transform: translate(0em, 0em); }
-}
 @keyframes restart {
   0%   { transform: translate(0em, 0em); }
   20%  { transform: translate(-0.2em, 0em); }
