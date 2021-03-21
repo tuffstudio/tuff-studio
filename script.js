@@ -190,4 +190,12 @@ $(function() {
     });
   }
 
+  WebFont.load({
+    custom: {
+      families: ['JudeBold', 'JudeMediumItalic']
+    },
+    timeout: 2000
+  });
+
 });
+

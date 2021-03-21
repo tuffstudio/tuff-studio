@@ -1,4 +1,4 @@
-@font-face { font-family: "JudeBold"; font-weight: normal; font-style: normal;
+@font-face { font-family: "c"; font-weight: normal; font-style: normal;
   src: url(fonts/Jude-BoldLiningNumbersWeb.eot);
   src: url(fonts/Jude-BoldLiningNumbersWeb-.eot#iefix) format('eot'),
        url(fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype'); }
@@ -8,9 +8,15 @@
        url(fonts/Jude-MediumItalicWeb.ttf) format('truetype'); }
 
 html { overflow-x: hidden; }
-body { background: url('lines.gif') #fff; color: #001f3f;/*#0D1D32;*/ font-size: 2.9em; line-height: 1.35; margin: 1em 0em 0em;
+body{ 
+  background: url('lines.gif') #fff; 
+  color: #001f3f; 
+  font-size: 2.9em; 
+  line-height: 1.35; 
+  margin: 1em 0em 0em;
   -webkit-text-size-adjust: 100%;
-  font-family: "JudeBold", times, serif;}
+  font-family: "JudeBold", times, serif;
+}
 @media screen and (max-width: 600px) {
   body { font-size: 2.4em; }
 }
