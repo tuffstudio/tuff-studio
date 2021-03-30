@@ -1,11 +1,15 @@
 @font-face { font-family: "JudeBold"; font-weight: normal; font-style: normal;
   src: url(fonts/Jude-BoldLiningNumbersWeb.eot);
   src: url(fonts/Jude-BoldLiningNumbersWeb-.eot#iefix) format('eot'),
-       url(fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype'); }
+       url(fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype'); 
+       font-display: swap;
+      }
 @font-face { font-family: "JudeMediumItalic"; font-weight: normal; font-style: normal;
   src: url(fonts/Jude-MediumItalicWeb.eot);
   src: url(fonts/Jude-MediumItalicWeb-.eot#iefix) format('eot'),
-       url(fonts/Jude-MediumItalicWeb.ttf) format('truetype'); }
+       url(fonts/Jude-MediumItalicWeb.ttf) format('truetype'); 
+       font-display: swap;
+      }
 
 html { 
   overflow-x: hidden; 
