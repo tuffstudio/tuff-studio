@@ -8,7 +8,7 @@
  */
 (function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
 
-$(window).load(function() {
+$(window).on("load",function() {
 
   //
   //
@@ -78,7 +78,7 @@ $(function() {
     $('html, body').animate({ scrollTop: 0 }, 400);
   });
 
-  $('a[href^=#project]').on('click', function(e) {
+  $('a[href^="#project"]').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
 
@@ -132,9 +132,16 @@ $(function() {
   //
 
   $(window).on('hashchange', function() {
-    var target = $(document.location.hash.replace(/\//, '')).prev('p').find('a');
-    if (!target.length) target = $('.back');
-    target.click();
+    var target;
+    var trimHash = document.location.hash.replace(/\//, '');
+    if (trimHash !== "#") {
+     target = $(trimHash).prev('p').find('a');
+    }else{
+      target = $('.back');
+    }
+    
+    target.trigger('click');
+    
   }).trigger('hashchange');
 
 
@@ -181,7 +188,7 @@ $(function() {
         }
       }
     });
-  } ) ).scroll();
+  } ) ).trigger('scroll');
 
   // Fix an iOS HTML5 video bug
   if(/(iPhone|iP[oa]d)/.test(navigator.userAgent)) {
