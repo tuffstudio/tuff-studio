@@ -192,6 +192,7 @@ $(function() {
 
   // Fix an iOS HTML5 video bug
   if(/(iPhone|iP[oa]d)/.test(navigator.userAgent)) {
+    $('.restart-video').hide();
     $('video').each(function() {
       $(this).prop('controls', true).css({ width: "100%", height: "10em" });
     });
