@@ -78,7 +78,7 @@ $(function() {
     $('html, body').animate({ scrollTop: 0 }, 400);
   });
 
-  $('a[href^=#project]').on('click', function(e) {
+  $('a[href^="#project"]').on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
 
