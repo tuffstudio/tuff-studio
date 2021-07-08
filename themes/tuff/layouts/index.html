@@ -1,0 +1,55 @@
+{{ define "main" }}
+  <div class="wrapper">
+    <div class="projects">
+      <h2>A few things I’ve worked on,</h2>
+      
+      {{- range $index, $value := sort ( where .Site.RegularPages "Kind" "page" ) "Params.order" -}}
+      <p>
+        <a href="#project{{ $index }}" data-url="">{{ .Title }}</a>
+      </p>
+      <div id="project{{ $index }}" class="project" data-year="">
+        <p>
+          {{- if isset .Params "link" -}}
+          {{- $url := urls.Parse .Params.link -}}
+          <a href="{{ .Params.link | safeHTML }}" data-url="{{ $url.Host }}">{{ .Title }}</a>
+          {{- end -}}
+          {{ if isset .Params "description" }} 
+          - {{ .Params.description }}
+          {{ end }}
+        </p>
+        <figure class="video-wrapper">
+          <video preload="auto" loop="" poster="{{ .Permalink }}{{ .File.ContentBaseName }}.png">
+            <source src="{{ .Permalink }}{{ .File.ContentBaseName }}.mp4" type="video/mp4">
+          </video>
+          {{- if isset .Params "video_caption" -}}
+          <figcaption>
+            — {{ .Params.video_caption }}
+          </figcaption>
+          {{- end -}}
+          <button class="restart-video">⇤</button>
+        </figure>
+        {{- if isset .Params "commissioned" -}}
+        <p>
+          {{ .Params.commissioned }}
+        </p>
+        {{- end -}}
+        <figure class="video-wrapper">
+          <img src="{{ .Permalink }}{{ .File.ContentBaseName }}.jpg">
+          {{- if isset .Params "image_caption" -}}
+          <figcaption>
+            — {{ .Params.image_caption }}
+          </figcaption>
+          {{- end -}}
+        </figure>
+      </div>
+      {{- end -}}
+
+
+    </div>
+    <h2>Elsewhere on the internet,</h2>
+    <p>
+      I'm also on <a href="https://github.com/tuffstudio" data-url="github.com/tuffstudio">Github</a>,
+      and share some thoughts on <a href="http://twitter.com/tuffstudio" data-url="twitter.com/tuffstudio">Twitter</a>.
+    </p>
+  </div>
+{{ end }}

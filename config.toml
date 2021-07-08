@@ -1,0 +1,5 @@
+baseURL = "https://tuff-studio.com/"
+languageCode = "en-uk"
+title = "Tuff Studio, Designer / Developer"
+theme = "tuff"
+disableKinds = ["taxonomy", "term"]
