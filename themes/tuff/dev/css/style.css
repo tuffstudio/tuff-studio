@@ -247,7 +247,7 @@ body.open-project .back-holder {
 .project {
 	position: absolute;
 	z-index: 7;
-	top: -3.07em;
+	top: -4.7em;
 	margin-left: 100%;
 	width: 86%;
 	padding-bottom: 1.5em;
@@ -333,6 +333,17 @@ body.open-project .back-holder {
 @media screen and (max-width: 760px) {
 	.open-project .wrapper {
 		transform: translate(-68.9%, 0em);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.open-project .active-project {
+		top: -6em;
+	}
+}
+@media screen and (max-width: 320px) {
+	.open-project .active-project {
+		top: -8em;
 	}
 }
 .secondary {
