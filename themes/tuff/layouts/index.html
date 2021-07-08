@@ -18,8 +18,10 @@
           {{ end }}
         </p>
         <figure class="video-wrapper">
+          {{- $mp4s := where (.Resources.ByType "video") "MediaType.SubType" "mp4" -}}
+          {{- $firstMP4 := index ($mp4s) 0 -}}
           <video preload="auto" loop="" poster="{{ .Permalink }}{{ .File.ContentBaseName }}.png">
-            <source src="{{ .Permalink }}{{ .File.ContentBaseName }}.mp4" type="video/mp4">
+            <source src="{{ $firstMP4.RelPermalink }}" type="video/mp4">
           </video>
           {{- if isset .Params "video_caption" -}}
           <figcaption>
