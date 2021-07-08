@@ -6,3 +6,7 @@ config.codekit3
 # Generated files by hugo
 /public/
 /resources/_gen/
+
+### macOS ###
+# General
+.DS_Store
