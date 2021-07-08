@@ -33,14 +33,22 @@
           {{ .Params.commissioned }}
         </p>
         {{- end -}}
+
+        {{- if isset .Params "image_caption" -}}
+        {{ $image_caption := string (.Params.image_caption)  }}
+        {{ $.Scratch.Set "image_caption" "— " }}
+        {{ $.Scratch.Add "image_caption" $image_caption }}
+        {{- end -}}
+
+        {{- $jpgImages := where (.Resources.ByType "image") "MediaType.SubType" "jpeg" -}}
+        {{- range $jpgImages -}}
         <figure class="video-wrapper">
-          <img src="{{ .Permalink }}{{ .File.ContentBaseName }}.jpg">
-          {{- if isset .Params "image_caption" -}}
+          <img src='{{ .RelPermalink }}'>
           <figcaption>
-            — {{ .Params.image_caption }}
+            {{ $.Scratch.Get "image_caption" }}
           </figcaption>
-          {{- end -}}
         </figure>
+        {{- end -}}
       </div>
       {{- end -}}
 
