@@ -1,5 +1,8 @@
 baseURL = "https://tuff-studio.com/"
-languageCode = "en-uk"
-title = "Tuff Studio, Designer / Developer"
+languageCode = "UTF-8"
+title = "Tuff Studio, Freelance Web Developer"
 theme = "tuff"
 disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "I make websites and web apps. Based in London and Europe."
