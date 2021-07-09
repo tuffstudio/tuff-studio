@@ -76,9 +76,15 @@ a {
 	border-bottom: 0.1em solid;
 	transition: color 200ms ease-in-out;
 }
-a:hover {
+a:hover{
 	color: #0099CC;
 }
+
+:focus {
+	outline: none;
+	color: #0099CC;
+}
+
 a[data-url] {
 	position: relative;
 	display: inline;
