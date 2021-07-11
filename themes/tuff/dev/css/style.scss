@@ -113,8 +113,8 @@ canvas {
 
 p {
 	margin: 0em 0em 0.75em;
-	hyphenate-limit-after: 4;
-	hyphenate-limit-before: 4;
+	-webkit-hyphenate-limit-after: 4;
+	-webkit-hyphenate-limit-before: 4;
 	hyphens: auto;
 }
 
