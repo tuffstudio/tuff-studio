@@ -81,13 +81,13 @@ html {
 			}
 		}
 	}
-}
 
-html.wf-judebold-n4-active body {
-	font-weight: 400;
-	letter-spacing: normal;
-	word-spacing: normal;
-	font-family: "JudeBold";
+	&.wf-judebold-n4-active body {
+		font-weight: 400;
+		letter-spacing: normal;
+		word-spacing: normal;
+		font-family: "JudeBold";
+	}
 }
 
 .open-project {
