@@ -6,23 +6,6 @@ $accent-color: #0099CC;
 	font-style: italic;
 }
 
-// @font-face {
-// 	font-family: "JudeBold";
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	src: url(../fonts/Jude-BoldLiningNumbersWeb.eot);
-// 	src: url(../fonts/Jude-BoldLiningNumbersWeb-.eot#iefix) format('eot'), url(../fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype');
-// 	font-display: swap;
-// }
-// @font-face {
-// 	font-family: "JudeMediumItalic";
-// 	font-weight: normal;
-// 	font-style: normal;
-// 	src: url(../fonts/Jude-MediumItalicWeb.eot);
-// 	src: url(../fonts/Jude-MediumItalicWeb-.eot#iefix) format('eot'), url(../fonts/Jude-MediumItalicWeb.ttf) format('truetype');
-// 	font-display: swap;
-// }
-
 html {
 	overflow-x: hidden;
 
@@ -32,11 +15,11 @@ html {
 		margin: 1em 0em 0em;
 		text-size-adjust: 100%;
 		font-size: 2.9em;
-		line-height: 1.35;
-		font-weight: 400;
+		line-height: 1.4;
+		font-weight: 500;
 		letter-spacing: 1px;
 		word-spacing: 6px;
-		font-family: Times, serif;
+		font-family: times, serif;
 
 		@media screen and (max-width: 600px) {
 			font-size: 2.4em;
@@ -150,12 +133,11 @@ a {
 a[data-url] {
 	position: relative;
 	display: inline;
-	padding-top: 0.1em;
 
 	&:after {
 		content: "↪ " attr(data-url);
 		position: absolute;
-		top: -1em;
+		top: -0.9em;
 		left: 0;
 		font-size: 0.275em;
 		white-space: nowrap;
@@ -255,7 +237,6 @@ hr {
 	a {
 		position: relative;
 		line-height: 1.5;
-		padding-bottom: 0.1em;
 	}
 
 	.prev {
@@ -381,7 +362,7 @@ hr {
 
 @media screen and (max-width: 480px) {
 	.open-project .active-project {
-		top: -6em;
+		top: -5.5em;
 	}
 }
 @media screen and (max-width: 320px) {
