@@ -1,21 +1,27 @@
 $accent-color: #0099CC;
 
-@font-face {
-	font-family: "JudeBold";
-	font-weight: normal;
-	font-style: normal;
-	src: url(../fonts/Jude-BoldLiningNumbersWeb.eot);
-	src: url(../fonts/Jude-BoldLiningNumbersWeb-.eot#iefix) format('eot'), url(../fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype');
-	font-display: swap;
+@mixin medium_italic {
+	font-family: 'Volkhov', serif;
+	font-weight: 400;
+	font-style: italic;
 }
-@font-face {
-	font-family: "JudeMediumItalic";
-	font-weight: normal;
-	font-style: normal;
-	src: url(../fonts/Jude-MediumItalicWeb.eot);
-	src: url(../fonts/Jude-MediumItalicWeb-.eot#iefix) format('eot'), url(../fonts/Jude-MediumItalicWeb.ttf) format('truetype');
-	font-display: swap;
-}
+
+// @font-face {
+// 	font-family: "JudeBold";
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	src: url(../fonts/Jude-BoldLiningNumbersWeb.eot);
+// 	src: url(../fonts/Jude-BoldLiningNumbersWeb-.eot#iefix) format('eot'), url(../fonts/Jude-BoldLiningNumbersWeb.ttf) format('truetype');
+// 	font-display: swap;
+// }
+// @font-face {
+// 	font-family: "JudeMediumItalic";
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	src: url(../fonts/Jude-MediumItalicWeb.eot);
+// 	src: url(../fonts/Jude-MediumItalicWeb-.eot#iefix) format('eot'), url(../fonts/Jude-MediumItalicWeb.ttf) format('truetype');
+// 	font-display: swap;
+// }
 
 html {
 	overflow-x: hidden;
@@ -27,10 +33,10 @@ html {
 		text-size-adjust: 100%;
 		font-size: 2.9em;
 		line-height: 1.35;
-		font-weight: 600;
+		font-weight: 400;
 		letter-spacing: 1px;
 		word-spacing: 6px;
-		font-family: times, serif;
+		font-family: Times, serif;
 
 		@media screen and (max-width: 600px) {
 			font-size: 2.4em;
@@ -82,11 +88,11 @@ html {
 		}
 	}
 
-	&.wf-judebold-n4-active body {
+	&.wf-volkhov-n4-active body {
 		font-weight: 400;
 		letter-spacing: normal;
 		word-spacing: normal;
-		font-family: "JudeBold";
+		font-family: 'Volkhov', serif;
 	}
 }
 
@@ -154,7 +160,8 @@ a[data-url] {
 		font-size: 0.275em;
 		white-space: nowrap;
 		opacity: 0.4;
-		font-family: "JudeMediumItalic";
+		
+		@include medium_italic;
 	}
 }
 
@@ -268,7 +275,7 @@ hr {
 			position: absolute;
 			margin: 0.5em 0em 0em -1.5em;
 			font-size: 1em;
-			font-family: "JudeBold";
+			font-family: 'Volkhov', serif;
 		}
 
 		&::after {
@@ -293,7 +300,7 @@ hr {
 			position: absolute;
 			margin: 0.5em 0em 0em -1.5em;
 			font-size: 1em;
-			font-family: "JudeBold";
+			font-family: 'Volkhov', serif;
 		}
 
 		&::after {
@@ -459,7 +466,8 @@ hr {
 		font-size: 0.275em;
 		letter-spacing: 1px;
 		color: #6A727C;
-		font-family: "JudeMediumItalic";
+		
+		@include medium_italic;
 	}
 
 	p {

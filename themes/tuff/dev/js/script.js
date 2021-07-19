@@ -193,7 +193,7 @@ $(function() {
   // Web Font Loader
   WebFont.load({
     custom: {
-      families: ['JudeBold', 'JudeMediumItalic']
+      families: ['Volkhov']
     },
     timeout: 2000
   });
