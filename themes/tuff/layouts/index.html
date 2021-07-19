@@ -1,7 +1,7 @@
 {{ define "main" }}
   <div class="wrapper">
     <div class="projects">
-      <h2>A few things I’ve worked on,</h2>
+      <h2>A few things I’ve worked on:</h2>
       
       {{- range $index, $value := sort ( where .Site.RegularPages "Kind" "page" ) "Params.order" -}}
       <p>
@@ -58,10 +58,10 @@
 
 
     </div>
-    <h2>Elsewhere on the internet,</h2>
+    <h2>Elsewhere on the internet:</h2>
     <p>
-      I'm also on <a href="https://github.com/tuffstudio" data-url="github.com/tuffstudio">Github</a>,
-      and share some thoughts on <a href="http://twitter.com/tuffstudio" data-url="twitter.com/tuffstudio">Twitter</a>.
+      Here's my <a href="https://github.com/tuffstudio" data-url="github.com/tuffstudio">Github</a>,
+      I also share some thoughts on <a href="http://twitter.com/tuffstudio" data-url="twitter.com/tuffstudio">Twitter</a>.
     </p>
   </div>
 {{ end }}
