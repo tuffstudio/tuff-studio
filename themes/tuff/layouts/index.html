@@ -47,7 +47,7 @@
         {{- $jpgImages := where (.Resources.ByType "image") "MediaType.SubType" "jpeg" -}}
         {{- range $jpgImages -}}
         <figure class="media-wrapper">
-          <img src='{{ .RelPermalink }}' alt='{{ index (split .Name ".") 0 | humanize}}'>
+          <img src='{{ .RelPermalink }}' width="{{ .Width }}" height="{{ .Height }}" alt='{{ index (split .Name ".") 0 | humanize}}'>
           <figcaption>
             {{ $.Scratch.Get "image_caption" }}
           </figcaption>
