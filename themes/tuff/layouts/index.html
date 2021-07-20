@@ -17,7 +17,7 @@
           - {{ .Params.description }}
           {{ end }}
         </p>
-        <figure class="video-wrapper">
+        <figure class="media-wrapper">
           {{- $pngImages := where (.Resources.ByType "image") "MediaType.SubType" "png" -}}
           {{- $firstPNG := index ($pngImages) 0 -}}
           {{- $mp4s := where (.Resources.ByType "video") "MediaType.SubType" "mp4" -}}
@@ -46,7 +46,7 @@
 
         {{- $jpgImages := where (.Resources.ByType "image") "MediaType.SubType" "jpeg" -}}
         {{- range $jpgImages -}}
-        <figure class="video-wrapper">
+        <figure class="media-wrapper">
           <img src='{{ .RelPermalink }}' alt='{{ index (split .Name ".") 0 | humanize}}'>
           <figcaption>
             {{ $.Scratch.Get "image_caption" }}

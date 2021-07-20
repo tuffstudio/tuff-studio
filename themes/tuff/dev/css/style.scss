@@ -400,7 +400,7 @@ hr {
 	font-family: "courier new", courier, monospace;
 }
 
-.play-videos .active-project .video-wrapper {
+.play-videos .active-project .media-wrapper {
 	visibility: visible;
 	opacity: 1;
 }
@@ -482,7 +482,7 @@ hr {
 		background: #dfdfdf;
 	}
 
-	.video-wrapper {
+	.media-wrapper {
 		opacity: 0;
 		position: relative;
 		display: block;
