@@ -130,6 +130,10 @@ a {
 	}
 }
 
+a, button {
+	touch-action: manipulation;
+}
+
 a[data-url] {
 	position: relative;
 	display: inline;
