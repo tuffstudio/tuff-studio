@@ -22,8 +22,8 @@
           {{- $firstPNG := index ($pngImages) 0 -}}
           {{- $mp4s := where (.Resources.ByType "video") "MediaType.SubType" "mp4" -}}
           {{- $firstMP4 := index ($mp4s) 0 -}}
-          <video preload="auto" loop="" poster="{{ $firstPNG.RelPermalink }}">
-            <source src="{{ $firstMP4.RelPermalink }}" type="video/mp4">
+          <video preload="auto" loop="" poster="{{ $firstPNG.Permalink }}">
+            <source src="{{ $firstMP4.Permalink }}" type="video/mp4">
           </video>
           {{- if isset .Params "video_caption" -}}
           <figcaption>
@@ -47,7 +47,7 @@
         {{- $jpgImages := where (.Resources.ByType "image") "MediaType.SubType" "jpeg" -}}
         {{- range $jpgImages -}}
         <figure class="media-wrapper">
-          <img src='{{ .RelPermalink }}' width="{{ .Width }}" height="{{ .Height }}" alt='{{ index (split .Name ".") 0 | humanize}}'>
+          <img src='{{ .Permalink }}' width="{{ .Width }}" height="{{ .Height }}" alt='{{ index (split .Name ".") 0 | humanize}}'>
           <figcaption>
             {{ $.Scratch.Get "image_caption" }}
           </figcaption>
