@@ -3,7 +3,7 @@ languageCode = "UTF-8"
 title = "Tuff Studio, Freelance Web Developer"
 theme = "tuff"
 disableKinds = ["taxonomy", "term"]
-disablePathToLower = true
+relativeURLs = true
 
 [params]
   description = "I make websites and web apps. Based in London and Europe."
